@@ -1,6 +1,6 @@
 
-nums = [2, 3, 4]
-target = 7
+nums = [3, 3]
+target = 6
 
 
 hashed = {}
@@ -15,6 +15,27 @@ def two_sum(nums, target):
         hashed[nums[i]] = i
 
 
-two_sum(nums, target)
-print(hashed)
 
+
+
+def twoSum_2(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    j = None
+    for i in range(len(nums)):
+
+
+        num = target - nums[i]
+
+        if num in nums[i + 1:]:
+            j = nums[i+1:].index(num)
+            print(j)
+
+
+            print([i,j+i+1])
+            return [i, j+i]
+
+twoSum_2(nums, target)
